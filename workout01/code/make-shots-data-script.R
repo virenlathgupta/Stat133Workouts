@@ -1,3 +1,11 @@
+
+# title: "make-shots-data-viren-gupta"
+# description: "Importing and modifying tables to develop summaries"
+# input: stephen-curry.csv, kevin-durant.csv, 
+  # klay-thompson.csv, andre-iguodala.csv, draymond-green.csv  
+# output: stephen-curry-summary.txt, kevin-durant-summary.txt, 
+  # klay-thompson-summary.txt, andre-iguodala-summary.txt, draymond-green-summary.txt  
+
 curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
 iguodala <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE)
 durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE)
@@ -24,9 +32,8 @@ durant$minute = 12 * durant$period + 12 - durant$minutes_remaining
 thompson$minute = 12 * thompson$period + 12 - thompson$minutes_remaining
 iguodala$minute = 12 * iguodala$period + 12 - iguodala$minutes_remaining
 total <- rbind(iguodala, green, durant, thompson, curry)
-write.csv(total, file = "../data/shots-data.csv")
-sink(file = "../output/shots-data-summary.txt")
-summary(total)
-sink()
+total$name
+
+
 
 
