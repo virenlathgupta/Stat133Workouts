@@ -1,0 +1,15 @@
+---
+title: "README"
+author: "Viren Gupta"
+date: "5/1/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Binomial Distributions
+
+This workout focuses on creating an R package centered around Binomial Distributions and their characteristics. 
+
