@@ -40,4 +40,52 @@ bin_probability(3, 5, 0.5)
 
 It can be seen that this is the same as (5 choose 3) * (0.5 ^ 3) * (0.5 ^ 2) = 0.3125
 
+## bin_distribution
 
+The following function allows the user to engage in combanitorics and find several probabilities for a range of different success values that are less than the number of trials. It's plot is a histogram, with successes on x and probability on y. An example can be found in the code chunk below:
+
+```{r}
+bin1 <- bin_distribution(5, 0.5)
+bin1
+plot(bin1)
+```
+## bin_cumulative
+
+The following function allows the user to engage in combanitorics and find several probabilities for a range of different success values that are less than the number of trials. It's plot is a line, with successes on x and probability on y. Furthermore, it adds all previous probabilities to display that the sum of all probabilities = 1. An example can be found in the code chunk below:
+
+```{r}
+bin1 <- bin_cumulative(5, 0.5)
+plot(bin1)
+```
+
+## bin_mean
+
+The following function allows the user to find the mean of a given binomial distribution = np.
+
+```{r}
+bin_mean(5, 0.5)
+```
+
+## bin_variance
+The following function allows the user to find the variance of a given binomial distribution = np(1 - p).
+
+```{r}
+bin_variance(5, 0.5)
+```
+
+## bin_mode
+The following function allows the user to find the mode of a given binomial distribution = int(np + p).
+```{r}
+bin_mode(5, 0.5)
+```
+
+## bin_skewness
+The following function allows the user to find the skewness of a given binomial distribution = (1 - 2p) / sqrt(variance).
+```{r}
+bin_skewness(10, 0.3)
+```
+## bin_kurtosis
+The following function allows the user to find the kurtosis of a given binomial distribution = (1 - 6p(1 - p)) / variance.
+```{r}
+bin_kurtosis(10, 0.3)
+```
