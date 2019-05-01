@@ -1,0 +1,43 @@
+---
+title: "binomial-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{binomial-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(binomial)
+```
+
+
+## Binomial Distributions
+
+This package allows to create various forms of Binomial Distributions such that the user can access methods that allow them to calcluate certain probabilities, given the number of trials and successes.
+
+## bin_choose
+
+The following function allows the user to engage in combanitorics and find n choose k.
+
+```{r}
+bin_choose(4, 3)
+```
+
+In the example above, 4 choose 3 is the same as 4! / 3! = 4.
+
+## bin_probability 
+
+The following function allows the user to engage in combanitorics and find probability given success, number of trials, and probability of success.
+
+```{r}
+bin_probability(3, 5, 0.5)
+```
+
+It can be seen that this is the same as (5 choose 3) * (0.5 ^ 3) * (0.5 ^ 2) = 0.3125
+
+
